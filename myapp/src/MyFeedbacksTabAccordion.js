@@ -17,20 +17,9 @@ import FaThumbsOUp from 'react-icons/lib/fa/thumbs-o-up';
 import FaThumbsODown from 'react-icons/lib/fa/thumbs-o-down';
 import FaWechat from 'react-icons/lib/fa/wechat';
 import FaLightbulbO from 'react-icons/lib/fa/lightbulb-o';
-import MessageList from "./MessageList";
+
 
 class MyFeedbacksTabAccordion extends Component {
-
-    constructor(props){
-        super(props)
-        this.state = {
-            messages: [
-                { body: "Connecting..."},
-                { author: "You", body: "Hello!", me: true},
-                { author: "Them", body: "Hey there!"},
-            ],
-        }
-    }
 
     render() {
         return (
@@ -39,7 +28,7 @@ class MyFeedbacksTabAccordion extends Component {
                     <Accordion>
                         <AccordionItem>
                             <AccordionItemTitle>
-                                <h5 align="left" style={ {fontSize: 12, fontStyle: 'italic'}} cellPadding={30}><FaBug Icon size={35}/> On click the form was not sent...  <FaWechat Icon size={35} align="right" margin='25%' color={'#63C050'}/> <MessageList messages={this.state}/></h5>
+                                <h5 align="left" style={ {fontSize: 12, fontStyle: 'italic'}} cellPadding={30}><FaBug Icon size={35}/> On click the form was not sent...  <FaWechat Icon size={35} align="right" margin='25%' color={'#63C050'}/> </h5>
 
                             </AccordionItemTitle>
                             <AccordionItemBody>

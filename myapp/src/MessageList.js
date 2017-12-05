@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import PropTypes from 'react';
 
 class MessageList extends Component {
     static propTypes = {
-        messages: PropTypes.arrayOf(PropTypes.object)
+        messages: PropTypes.arrayOf(PropTypes.object),
     }
 
     static defaultProps={

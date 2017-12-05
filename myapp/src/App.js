@@ -15,8 +15,17 @@ import '../node_modules/react-accessible-accordion/dist/react-accessible-accordi
 import MyFeedbacksTabPanel from './MyFeedbacksTabPanel';
 import FeedbackCentral from "./FeedbackCentral";
 import MyFeedbacksTabAccordion from "./MyFeedbacksTabAccordion";
+import { Widget, addResponseMessage } from 'react-chat-widget';
 
 class App extends Component {
+    componentDidMount(){
+        addResponseMessage("Welcome to this awesome chat!");
+    }
+
+    handleNewUserMessage=(newMessage) => {
+        console.log(`New message incoming! ${newMessage}`);
+
+    }
 
 
   render() {
@@ -37,7 +46,8 @@ class App extends Component {
                 <TabPanel>
                     <MyFeedbacksTabPanel/>
                     <MyFeedbacksTabAccordion/>
-                    <h2>Any content 2</h2>
+                    <div> <Widget handleNewUserMessage={this.handleNewUserMessage}/>
+                    </div>
                     senf
                 </TabPanel>
             </Tabs>
