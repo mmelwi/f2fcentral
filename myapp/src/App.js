@@ -14,8 +14,10 @@ import 'react-tabs/style/react-tabs.css';
 import '../node_modules/react-accessible-accordion/dist/react-accessible-accordion.css';
 import MyFeedbacksTabPanel from './MyFeedbacksTabPanel';
 import FeedbackCentral from "./FeedbackCentral";
+import MyFeedbacksTabAccordion from "./MyFeedbacksTabAccordion";
 
 class App extends Component {
+
 
   render() {
     return (
@@ -34,7 +36,7 @@ class App extends Component {
 
                 <TabPanel>
                     <MyFeedbacksTabPanel/>
-
+                    <MyFeedbacksTabAccordion/>
                     <h2>Any content 2</h2>
                     senf
                 </TabPanel>
