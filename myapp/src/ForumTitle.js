@@ -34,7 +34,7 @@ class ForumTitle extends Component
   render() {
     return (<div style={{display: "flex", justifyContent: "flex-start"}}>
         <h5 align="left" style={{flexGrow: 5, fontSize: 12, fontStyle: 'italic'}}>{this.getIconForFeedbackType(this.props.type)}&nbsp; {this.props.title}</h5>
-        <div style={{flexGrow: 1, marginTop: '20px'}}><FaWechat Icon align="left" size={35} color={'#63C050'} onClick={this.handleShowCommentChange}/><FaThumbsOUp Icon size={20} /><FaThumbsODown Icon size={20} color={'black'} padding={10}/></div>
+        <div class="iconContainer" style={{flexGrow: 1, marginTop: '20px'}}><FaWechat Icon align="left" size={35} color={'#63C050'} onClick={this.handleShowCommentChange}/><FaThumbsOUp Icon size={20} /><FaThumbsODown Icon size={20} color={'black'} padding={10}/></div>
     </div>);
   }
 }

@@ -104,6 +104,14 @@ button {
   padding: 20px;
 }
 
+.iconContainer svg {
+  margin-left: 10px;
+}
+
+.iconContainer svg:first-child {
+  margin-left: 0px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
