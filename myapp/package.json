@@ -11,7 +11,10 @@
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
     "react-scripts": "^1.0.17",
-    "react-tabs": "^2.1.1"
+    "react-select": "^1.1.0",
+    "react-tabs": "^2.1.1",
+    "react-uikit-comment": "^2.0.2",
+    "react-uikit-comment-list": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

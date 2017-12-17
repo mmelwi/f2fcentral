@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import logo from './logo.svg';
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemTitle,
-    AccordionItemBody,
-} from 'react-accessible-accordion';
 
-import './App.css';
 import 'react-tabs/style/react-tabs.css';
 
 import '../node_modules/react-accessible-accordion/dist/react-accessible-accordion.css';
-import MyFeedbacksTabPanel from './MyFeedbacksTabPanel';
-import FeedbackCentral from "./FeedbackCentral";
+import './App.css';
 import MyFeedbacksTabAccordion from "./MyFeedbacksTabAccordion";
 import { Widget, addResponseMessage } from 'react-chat-widget';
+import ForumSorting from "./ForumSorting";
+import FeedbackForumTabAccordion from "./FeedbackForumTabAccordion";
+import CommentUI from "./CommentUI";
 
 class App extends Component {
-    componentDidMount(){
-        addResponseMessage("Welcome to this awesome chat!");
+
+    constructor(props)
+    {
+        super(props);
+        this.state = { sorting: '' };
     }
 
-    handleNewUserMessage=(newMessage) => {
+    componentDidMount() {
+        addResponseMessage("Thank you for your time. We have some additional questions regarding your feedback.");
+    }
+
+    handleNewUserMessage = (newMessage) => {
         console.log(`New message incoming! ${newMessage}`);
 
     }
 
+    onUpdate(sorting) { this.setState({sorting: sorting}); }
 
   render() {
     return (
@@ -35,7 +38,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
+
 
             <Tabs style={ {activeTabContentStyle: {backgroundColor:'#1A7E92', borderColor: '#1A7E92'}}}>
                 <TabList>
@@ -44,14 +47,16 @@ class App extends Component {
                 </TabList>
 
                 <TabPanel>
-                    <MyFeedbacksTabPanel/>
                     <MyFeedbacksTabAccordion/>
-                    <div> <Widget handleNewUserMessage={this.handleNewUserMessage}/>
-                    </div>
-                    senf
+                    <Widget handleNewUserMessage={this.handleNewUserMessage}/>
                 </TabPanel>
+                <TabPanel>
+                    <ForumSorting onUpdate={this.onUpdate.bind(this)}/>
+                    <FeedbackForumTabAccordion/>
+                    <CommentUI/>
+                </TabPanel>
+
             </Tabs>
-        </p>
       </div>
     );
   }
