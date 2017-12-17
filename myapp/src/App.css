@@ -47,6 +47,8 @@
 .accordion__item	{
   background-color: #FFF;
   margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .uk-comment-list {
