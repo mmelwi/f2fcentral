@@ -24,11 +24,11 @@ class FeedbackTitle extends Component {
   }
 
   getIconForFeedbackType() {
-      if (this.type === 1) {
+      if (this.props.type === 1) {
           return <FaBug Icon size={35} padding={75}/>;
       }
 
-      if (this.type === 2) {
+      if (this.props.type === 2) {
           return <FaLightbulbO Icon size={35} padding={75}/>;
       }
 
