@@ -69,7 +69,7 @@ class FeedbackForumTabAccordion extends Component {
                             </AccordionItemTitle>
                             <AccordionItemBody>
                                 <div>
-                                    <ForumBody status={testItem.status} date={testItem.date}/>
+                                    <ForumBody status={testItem.status} date={testItem.date} onShowCommentChange={instance.handleShowCommentChange} index={index}/>
                                 </div>
                             </AccordionItemBody>
                         </AccordionItem>
