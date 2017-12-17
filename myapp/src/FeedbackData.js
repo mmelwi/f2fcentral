@@ -34,7 +34,7 @@ class FeedbackData {
         "categoryFeedbacks": [
           {
             "id": 12,
-            "mechanismId": 1,
+            "mechanismId": 2,
             "parameterId": 663,
             "text": "Is it possible to display the number of accounts in one household"
           }
@@ -51,7 +51,7 @@ class FeedbackData {
         "textFeedbacks": [
           {
             "id": 12,
-            "text": "Is it possible to display my current expenses",
+            "text": "",
             "mechanismId": 88
           }
         ],
@@ -90,9 +90,9 @@ class FeedbackData {
         "categoryFeedbacks": [
           {
             "id": 13,
-            "mechanismId": 0,
+            "mechanismId": 2,
             "parameterId": 663,
-            "text": ""
+            "text": "Can you add an option to display my current expenses and the concrete account number?"
           }
         ],
         "ratingFeedbacks": [
@@ -146,9 +146,9 @@ class FeedbackData {
         "categoryFeedbacks": [
           {
             "id": 14,
-            "mechanismId": 0,
+            "mechanismId": 1,
             "parameterId": 663,
-            "text": ""
+            "text": "On click the form was not sent and I got an error message titled 'empty form'. What should I do now? I do not have access to my account anymore."
           }
         ],
         "ratingFeedbacks": [
@@ -163,7 +163,7 @@ class FeedbackData {
         "textFeedbacks": [
           {
             "id": 14,
-            "text": "I like your company",
+            "text": "",
             "mechanismId": 88
           }
         ],
@@ -204,7 +204,7 @@ class FeedbackData {
             "id": 15,
             "mechanismId": 0,
             "parameterId": 663,
-            "text": ""
+            "text": "I like your company"
           }
         ],
         "ratingFeedbacks": [
@@ -275,7 +275,7 @@ class FeedbackData {
         "textFeedbacks": [
           {
             "id": 16,
-            "text": "asdfefr",
+            "text": "",
             "mechanismId": 88
           }
         ],
@@ -331,7 +331,7 @@ class FeedbackData {
         "textFeedbacks": [
           {
             "id": 17,
-            "text": "asfef4f",
+            "text": "",
             "mechanismId": 88
           }
         ],
