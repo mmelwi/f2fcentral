@@ -25,11 +25,11 @@
 
 .widget-container > .launcher {
   display: none;
-  background-color: #179BD6;
+  background-color: #1A7E92;
 }
 
 .widget-container .conversation-container .header {
-  background-color: #179BD6;
+  background-color: #1A7E92;
 }
 
 .widget-container > .hide-sm {
@@ -79,7 +79,7 @@
 }
 
 button {
-    background-color: #179BD6;
+    background-color: #1A7E92;
     border: none;
     color: white;
     padding: 15px 16px;
