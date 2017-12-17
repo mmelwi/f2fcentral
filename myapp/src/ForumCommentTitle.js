@@ -23,7 +23,7 @@ class ForumCommentTitle extends Component {
 
 
   render() {
-    return (<div style={{display: "flex", justifyContent: "flex-start"}}>
+    return (<div style={{display: "flex", justifyContent: "flex-start", padding: "20px", background: "#FFF"}}>
         <h5 align="left" style={{flexGrow: 2, fontSize: 12, fontStyle: 'italic'}}>{this.getIconForFeedbackType(this.props.type)}&nbsp; {this.props.title}</h5>
     </div>);
   }

@@ -34,9 +34,9 @@ class FeedbackData {
         "categoryFeedbacks": [
           {
             "id": 12,
-            "mechanismId": 0,
+            "mechanismId": 1,
             "parameterId": 663,
-            "text": ""
+            "text": "Is it possible to display the number of accounts in one household"
           }
         ],
         "ratingFeedbacks": [
@@ -452,3 +452,5 @@ class FeedbackData {
     ];
   }
 }
+
+export default FeedbackData;
