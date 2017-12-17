@@ -10,7 +10,10 @@ import './App.css';
 import 'react-tabs/style/react-tabs.css';
 
 import 'react-accessible-accordion/dist/react-accessible-accordion.css';
-import ForumModel from "./ForumModel";
+import ForumTitle from "./ForumTitle";
+import ForumBody from "./ForumBody";
+import FeedbackForumCommentView from "./FeedbackForumCommentView";
+import ForumSorting from "./ForumSorting";
 
 
 class FeedbackForumTabAccordion extends Component {
@@ -38,33 +41,46 @@ class FeedbackForumTabAccordion extends Component {
                     date: "03.09.2017 at 10:31 am"
                 }
             ],
-            showComment: false
+            showComment: false,
+            commentIndex: null,
+            sorting: ''
         };
+        this.handleShowCommentChange = this.handleShowCommentChange.bind(this);
     }
 
+    handleShowCommentChange(e) {
+      this.setState({showComment: e.showComment, commentIndex: e.index});
+    }
+
+    onUpdate(sorting) { this.setState({sorting: sorting}); }
 
     render() {
-
         let content = null;
         if(!this.state.showComment)
         {
-            content = <Accordion>
+            let instance = this;
+            content = <div><ForumSorting onUpdate={this.onUpdate.bind(this)} />
+            <Accordion>
                 {this.state.testData.map(function (testItem, index) {
-                    const model = new ForumModel(testItem.type, testItem.title, testItem.status, testItem.date);
                     return (
                         <AccordionItem>
                             <AccordionItemTitle>
-                                {model.getAccordionTitle()}
+                                <ForumTitle title={testItem.title} type={testItem.type} onShowCommentChange={instance.handleShowCommentChange} index={index}/>
                             </AccordionItemTitle>
                             <AccordionItemBody>
                                 <div>
-                                    {model.getAccordionBody()}
+                                    <ForumBody status={testItem.status} date={testItem.date}/>
                                 </div>
                             </AccordionItemBody>
                         </AccordionItem>
                     )
                 })}
-            </Accordion>
+            </Accordion></div>
+        }
+        else {
+
+            content = <FeedbackForumCommentView post={this.state.testData[this.state.commentIndex]}/>;
+
         }
 
         return (

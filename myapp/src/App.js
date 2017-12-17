@@ -8,16 +8,14 @@ import '../node_modules/react-accessible-accordion/dist/react-accessible-accordi
 import './App.css';
 import MyFeedbacksTabAccordion from "./MyFeedbacksTabAccordion";
 import { Widget, addResponseMessage } from 'react-chat-widget';
-import ForumSorting from "./ForumSorting";
 import FeedbackForumTabAccordion from "./FeedbackForumTabAccordion";
-import CommentUI from "./CommentUI";
 
 class App extends Component {
 
     constructor(props)
     {
         super(props);
-        this.state = { sorting: '' };
+        
     }
 
     componentDidMount() {
@@ -28,8 +26,6 @@ class App extends Component {
         console.log(`New message incoming! ${newMessage}`);
 
     }
-
-    onUpdate(sorting) { this.setState({sorting: sorting}); }
 
   render() {
     return (
@@ -42,8 +38,8 @@ class App extends Component {
 
             <Tabs style={ {activeTabContentStyle: {backgroundColor:'#1A7E92', borderColor: '#1A7E92'}}}>
                 <TabList>
-                    <Tab>My Feedbacks</Tab>
-                    <Tab>Feedback Forum</Tab>
+                    <Tab selectedClassName="tabselected">My Feedbacks</Tab>
+                    <Tab selectedClassName="tabselected">Feedback Forum</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -51,9 +47,7 @@ class App extends Component {
                     <Widget handleNewUserMessage={this.handleNewUserMessage}/>
                 </TabPanel>
                 <TabPanel>
-                    <ForumSorting onUpdate={this.onUpdate.bind(this)}/>
                     <FeedbackForumTabAccordion/>
-                    <CommentUI/>
                 </TabPanel>
 
             </Tabs>
