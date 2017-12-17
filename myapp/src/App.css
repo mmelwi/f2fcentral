@@ -25,6 +25,11 @@
 
 .widget-container > .launcher {
   display: none;
+  background-color: #179BD6;
+}
+
+.widget-container .conversation-container .header {
+  background-color: #179BD6;
 }
 
 .widget-container > .hide-sm {
