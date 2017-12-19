@@ -7,6 +7,8 @@ import FaWechat from 'react-icons/lib/fa/wechat';
 import FaLightbulbO from 'react-icons/lib/fa/lightbulb-o';
 import FaHandPeaceO from 'react-icons/lib/fa/hand-peace-o';
 import {toggleWidget} from 'react-chat-widget';
+import FaCogs from 'react-icons/lib/fa/cogs';
+import MdVisibilityOff from 'react-icons/lib/md/visibility-off';
 
 class FeedbackTitle extends Component {
 
@@ -42,7 +44,7 @@ class FeedbackTitle extends Component {
           fontSize: 12,
           fontStyle: 'italic'
       }} onClick={this.toggleExpanded}>{this.getIconForFeedbackType()}&nbsp; {(!this.state.expanded && this.props.title.length > 20)? this.props.title.substring(0, 20) + "...": this.props.title}</h5>
-      <FaWechat Icon align="left" size={35} color={'#63C050'} style={{flexGrow: "1"}} onClick={toggleWidget}/></div>);
+      <MdVisibilityOff size={35}/><FaWechat Icon align="left" size={35} color={'#63C050'} style={{flexGrow: "1"}} onClick={toggleWidget}/><FaCogs Icon size={35}/></div>);
   }
 }
 

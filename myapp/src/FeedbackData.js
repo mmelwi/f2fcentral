@@ -11,7 +11,7 @@ class FeedbackData {
         "configurationId": 46,
         "language": "en",
         "commentCount": 0,
-        "likeCount": 0,
+        "likeCount":  0,
         "dislikeCount": 0,
         "iconPath": null,
         "unreadCommentCount": 0,
@@ -38,6 +38,7 @@ class FeedbackData {
             "parameterId": 663,
             "text": "Is it possible to display the number of accounts in one household"
           }
+          //parameterId=featuretype
         ],
         "ratingFeedbacks": [
           {
@@ -229,7 +230,7 @@ class FeedbackData {
         "id": 113,
         "title": "Feedback",
         "userIdentification": "99999999",
-        "createdAt": "2017-12-12T19:11:33.000+0000",
+        "createdAt": "2017-12-18T08:53:33.000+0000",
         "updatedAt": null,
         "applicationId": 20,
         "configurationId": 46,
@@ -245,7 +246,7 @@ class FeedbackData {
           "resolution": "728x1366",
           "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
           "androidVersion": null,
-          "localTime": "2017-12-12T19:11:33.000+0000",
+          "localTime": "2017-12-18T09::05.000+0000",
           "timeZone": "+0100",
           "devicePixelRatio": 1.0,
           "country": null,
@@ -258,9 +259,9 @@ class FeedbackData {
         "categoryFeedbacks": [
           {
             "id": 16,
-            "mechanismId": 0,
+            "mechanismId": 1,
             "parameterId": 663,
-            "text": ""
+            "text": "I get continously the error message 'Server not reachable. Connection lost' in Internet Explorer. How can I open the page?"
           }
         ],
         "ratingFeedbacks": [

@@ -31,10 +31,14 @@ class ForumTitle extends Component
       return <FaHandPeaceO Icon size={35} padding={75}/>;
   }
 
+  handleLikes(e){
+     return <label for="likes">2</label>
+  }
+
   render() {
     return (<div style={{display: "flex", justifyContent: "flex-start"}}>
         <h5 align="left" style={{flexGrow: 5, fontSize: 12, fontStyle: 'italic'}}>{this.getIconForFeedbackType(this.props.type)}&nbsp; {this.props.title}</h5>
-        <div class="iconContainer" style={{flexGrow: 1, marginTop: '20px'}}><FaWechat Icon align="left" size={35} color={'#63C050'} onClick={this.handleShowCommentChange}/><FaThumbsOUp Icon size={20} /><FaThumbsODown Icon size={20} color={'black'} padding={10}/></div>
+        <div class="iconContainer" style={{flexGrow: 1, marginTop: '20px'}}><FaWechat Icon align="left" size={35} color={'#63C050'} onClick={this.handleShowCommentChange}/><FaThumbsOUp Icon size={20} onClick={this.handleLikes} /><FaThumbsODown Icon size={20} color={'black'} padding={10}/></div>
     </div>);
   }
 }
